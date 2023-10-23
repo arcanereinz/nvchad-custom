@@ -15,6 +15,8 @@ enable icons to be displayed on neovim
 curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
 unzip -d jet-brains-mono-nerd-font JetBrainsMono.zip
 mv jet-brains-mono-nerd-font ~/.local/share/fonts/
+# for macos copy *.ttf to ~/Library/Fonts
+# then open Font Book to verify
 fc-cache -f -v
 ```
 inside any typescript project install node types to allow lsp to read built-in types
