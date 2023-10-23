@@ -2,20 +2,28 @@
 
 ### Installation instructions
 
+```sh
 # install nvim 0.9+
 snap install nvim --classic
+```
 
+```sh
 # install nvchad
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+```
 
+```sh
 # enable icons to be displayed on neovim
 curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
 unzip -d jet-brains-mono-nerd-font JetBrainsMono.zip
 mv jet-brains-mono-nerd-font ~/.local/share/fonts/
 fc-cache -f -v
+```
 
+```sh
 # inside any typescript project install node types to allow lsp to read built-in types
 npm install --save-dev @types/node
+```
 
 ### Page list
 
@@ -29,21 +37,31 @@ nvim debugger ui: rcarriga/nvim-dap-ui
 
 ### Post Installation Instructions
 
+```sh
 # to get lsp working on redhat linux
 npm install -g typescript-language-server typescript
+```
 
+```sh
 # [run inside nvim] to fix treesitter unable to access /usr/share/nvim/runtime/lua/
 TSInstall comment
 TSInstall all
+```
 
+```sh
 # to enable live grep (find in file)
 sudo yum install ripgrep
+```
 
+```sh
 # startup dap server for javascript debugging in neovim
 echo 'alias dap="~/.local/share/nvim/mason/packages/js-debug-adapter/js-debug-adapter 8123 127.0.0.1"' >> ~/.bashrc
+```
 
+```sh
 # to get clipboard
 yum install xclip
+```
 
 ### Links
 
