@@ -1,9 +1,21 @@
 local plugins = {
+  -- codelldb nvim plugin
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    event = "VeryLazy",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "mfussenegger/nvim-dap",
+    },
+    opts = {
+      handlers = {},
+    }
+  },
   -- js debugger ui
   {
     "rcarriga/nvim-dap-ui",
     event = "VeryLazy",
-    dependencies = "mxsdev/nvim-dap-vscode-js",
+    dependencies = "mfussenegger/nvim-dap",
     config = function()
       local dap = require("dap")
       local dapui = require("dapui")
@@ -27,14 +39,14 @@ local plugins = {
       require("core.utils").load_mappings("dap")
     end
   },
-  -- formatter and linter [must delete formatter.nvim and nvim-lint]
-  -- {
-  --   "jose-elias-alvarez/null-ls.nvim",
-  --   event = "VeryLazy",
-  --   opts = function()
-  --     return require "custom.configs.null-ls"
-  --   end
-  -- },
+  -- C/C++ formatter and linter
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    event = "VeryLazy",
+    opts = function()
+      return require "custom.configs.null-ls"
+    end
+  },
   -- prettier (2 second delay between activation on write)
   {
     "mhartington/formatter.nvim",
@@ -59,7 +71,9 @@ local plugins = {
         "prettier", -- formatter
         "js-debug-adapter", -- JavaScript debugger
         "typescript-language-server", -- JavaScript/TypeScript LSP
-        "clangd" -- C/C++ LSP
+        "clangd", -- C/C++ LSP
+        "clang-format", -- C/C++ formatter
+        "codelldb", -- clang debugger
       }
     }
   },
