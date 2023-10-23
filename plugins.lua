@@ -1,4 +1,15 @@
 local plugins = {
+  -- http rest: see mappings.lua for setup details
+  {
+    "rest-nvim/rest.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+      require("rest-nvim").setup({
+        -- Skip SSL verification, useful for unknown certificates
+        skip_ssl_verification = true,
+      })
+    end
+  },
   -- codelldb nvim plugin
   {
     "jay-babu/mason-nvim-dap.nvim",
@@ -63,6 +74,7 @@ local plugins = {
       require "custom.configs.lint"
     end
   },
+  -- os-level package manager
   {
     "williamboman/mason.nvim",
     opts = {
@@ -77,12 +89,13 @@ local plugins = {
       }
     }
   },
+  -- plugin for lsp
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end,
-  }
+  },
 }
 return plugins
