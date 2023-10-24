@@ -26,13 +26,13 @@ npm install --save-dev @types/node
 
 ### Page list
 
-nvim package manager: lazy
-os package manager: mason
-nvim language server: neovim/nvim-lspconfig
-nvim lint: mfussenegger/nvim-lint
-nvim formatter: mhartington/formatter.nvim
-nvim debugger: mfussenegger/nvim-dap
-nvim debugger ui: rcarriga/nvim-dap-ui
+* nvim package manager: lazy
+* os package manager: mason
+* nvim language server: neovim/nvim-lspconfig
+* nvim lint: mfussenegger/nvim-lint
+* nvim formatter: mhartington/formatter.nvim
+* nvim debugger: mfussenegger/nvim-dap
+* nvim debugger ui: rcarriga/nvim-dap-ui
 
 ### Post Installation Instructions
 
