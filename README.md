@@ -24,7 +24,7 @@ inside any typescript project install node types to allow lsp to read built-in t
 npm install --save-dev @types/node
 ```
 
-### Page list
+### Plugin list
 
 * nvim package manager: lazy
 * os package manager: mason
@@ -64,5 +64,5 @@ yum install xclip
 
 ### Links
 
-https://www.youtube.com/watch?v=CVCBHHFXWNE
-https://mason-registry.dev/registry/list
+* https://www.youtube.com/watch?v=CVCBHHFXWNE
+* https://mason-registry.dev/registry/list
