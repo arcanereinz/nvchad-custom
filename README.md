@@ -2,15 +2,15 @@
 
 ### Installation instructions
 
-install nvim 0.9+
+1. install nvim 0.9+
 ```sh
 snap install nvim --classic
 ```
-install nvchad
+2. install nvchad
 ```sh
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 ```
-enable icons to be displayed on neovim
+3. enable icons to be displayed on neovim
 ```sh
 curl -LO https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
 unzip -d jet-brains-mono-nerd-font JetBrainsMono.zip
@@ -19,9 +19,17 @@ mv jet-brains-mono-nerd-font ~/.local/share/fonts/
 # then open Font Book to verify
 fc-cache -f -v
 ```
-inside any typescript project install node types to allow lsp to read built-in types
+4. inside any typescript project install node types to allow lsp to read built-in types
 ```sh
 npm install --save-dev @types/node
+```
+5. in neovim, resync Lazy package manager
+```sh
+:Lazy
+```
+6. in neovim, import os-level dependencies via custom mason mapping
+```sh
+:MasonInstallAll
 ```
 
 ### Plugin list
@@ -36,28 +44,28 @@ npm install --save-dev @types/node
 
 ### Post Installation Instructions
 
-to get lsp working on redhat linux
+* to get lsp working on redhat linux
 ```sh
 npm install -g typescript-language-server typescript
 ```
 
-[run inside nvim] to fix treesitter unable to access /usr/share/nvim/runtime/lua/
+* in neovim, to fix treesitter unable to access /usr/share/nvim/runtime/lua/
 ```sh
 TSInstall comment
 TSInstall all
 ```
 
-to enable live grep (find in file)
+* enable live grep (find in file)
 ```sh
 sudo yum install ripgrep
 ```
 
-startup dap server for javascript debugging in neovim
+* startup dap server for javascript debugging in neovim
 ```sh
 echo 'alias dap="~/.local/share/nvim/mason/packages/js-debug-adapter/js-debug-adapter 8123 127.0.0.1"' >> ~/.bashrc
 ```
 
-to get clipboard
+* to get clipboard
 ```sh
 yum install xclip
 ```
